@@ -21,3 +21,4 @@ const onClickIncrementBtn = (event) => {
 
 decrementBtn.addEventListener('click', onClickDecrementBtn);
 incrementBtn.addEventListener('click', onClickIncrementBtn);
+
