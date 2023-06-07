@@ -10,9 +10,12 @@
   placeholder="Please enter 6 symbols"
 />
 
-Яка кількість символів повинна бути в інпуті, зазначається в його атрибуті data-length.
-Якщо введена правильна кількість символів, то border інпуту стає зеленим, якщо неправильна кількість - червоним.
-Для додавання стилів використовуй CSS-класи valid і invalid, які ми вже додали у вихідні файли завдання.
+Яка кількість символів повинна бути в інпуті, зазначається в його атрибуті
+data-length.
+Якщо введена правильна кількість символів, то border інпуту стає зеленим, 
+якщо неправильна кількість - червоним.
+Для додавання стилів використовуй CSS-класи valid і invalid, які ми вже 
+додали у вихідні файли завдання.
 
 #validation-input {
   border: 3px solid #bdbdbd;
@@ -32,14 +35,14 @@ const inputEl = document.getElementById('validation-input');
 inputEl.addEventListener('blur', onBlurBorderColor);
 
 function onBlurBorderColor(event) {
-    const inputDataLength = Number(inputRef.dataset.length);
-    const inputValueLength = Number(inputRef.value.trim().length);
+    const inputDataLength = Number(inputEl.dataset.length);
+    const inputValueLength = Number(inputEl.value.trim().length);
   
     if (inputValueLength === inputDataLength) {
-      inputRef.classList.add('valid');
-      inputRef.classList.remove('invalid');
+      inputEl.classList.add('valid');
+      inputEl.classList.remove('invalid');
     } else {
-      inputRef.classList.remove('valid');
-      inputRef.classList.add('invalid');
+      inputEl.classList.remove('valid');
+      inputEl.classList.add('invalid');
     }
   }

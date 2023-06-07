@@ -14,9 +14,9 @@ document.querySelector('body').style.backgroundColor = '#cfd1e1';
 const inputEl = document.querySelector('#name-input');
 const nameEl = document.querySelector('#name-output');
 
-const getInputValue = ({ currentTarget }) => {
-  if (currentTarget.value.trim() !== '') {
-    nameEl.textContent = currentTarget.value.trim();
+const getInputValue = (event) => {
+  if (event.currentTarget.value.trim() !== '') {
+    nameEl.textContent = event.currentTarget.value.trim();
   } else {
     nameEl.textContent = 'Anonymous';
   }
